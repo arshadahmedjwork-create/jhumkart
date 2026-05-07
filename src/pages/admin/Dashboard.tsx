@@ -1,22 +1,15 @@
 import { useState, useEffect } from 'react';
 import { 
-  ShoppingBag, 
-  Users, 
-  IndianRupee, 
-  TrendingUp, 
   Package, 
   Flame, 
-  Download, 
   Settings,
   ArrowUpRight,
-  ArrowDownRight,
-  Minus
+  ArrowDownRight
 } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
-import { motion } from 'framer-motion';
 
 export function Dashboard() {
-  const [recentOrders, setRecentOrders] = useState<any[]>([]);
+  const [_recentOrders, _setRecentOrders] = useState<any[]>([]);
   const [products, setProducts] = useState<any[]>([]);
   const [drops, setDrops] = useState<any[]>([]);
   const [stats, setStats] = useState({
@@ -37,7 +30,7 @@ export function Dashboard() {
         ]);
 
         if (ordersRes.data) {
-          setRecentOrders(ordersRes.data.slice(0, 5));
+          _setRecentOrders(ordersRes.data.slice(0, 5));
           const totalRevenue = ordersRes.data.reduce((sum, o) => sum + o.total, 0);
           setStats(prev => ({
             ...prev,
@@ -51,7 +44,9 @@ export function Dashboard() {
           setDrops(dropsRes.data);
           setStats(prev => ({ ...prev, activeDrops: dropsRes.data.length }));
         }
-        if (customersRes.count !== null) setStats(prev => ({ ...prev, customers: customersRes.count }));
+        if (typeof customersRes.count === 'number') {
+          setStats(prev => ({ ...prev, customers: customersRes.count as number }));
+        }
 
       } catch (error) {
         console.error("Dashboard data orchestrator failed", error);

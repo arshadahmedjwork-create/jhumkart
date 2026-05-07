@@ -78,7 +78,7 @@ export function TrackOrder() {
             <h2 className="font-serif text-xl text-[#06251B] mb-8 border-b border-[#E8E1D5] pb-2">Order Status</h2>
             
             <div className="relative border-l-2 border-[#E8E1D5] ml-6 space-y-12 pb-4">
-              {steps.map((step, index) => {
+              {steps.map((step) => {
                 const Icon = step.icon;
                 const isCompleted = step.completed;
                 const isCurrent = order.order_status === step.id || (order.order_status === 'processing' && step.id === 'processing') || (order.order_status === 'pending' && step.id === 'processing');

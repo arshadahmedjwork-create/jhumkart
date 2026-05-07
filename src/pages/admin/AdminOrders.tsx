@@ -6,14 +6,13 @@ import {
   Filter, 
   ChevronRight, 
   Clock, 
-  Package,
   MoreHorizontal,
   CheckCircle2,
   Truck,
   XCircle,
   FileText
 } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion as _motion } from 'framer-motion';
 
 export function AdminOrders() {
   const [orders, setOrders] = useState<any[]>([]);

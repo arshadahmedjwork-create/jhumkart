@@ -1,15 +1,16 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { Filter, SlidersHorizontal, ChevronDown, Package } from 'lucide-react';
+import { Filter } from 'lucide-react';
 import { ProductCard } from '@/components/product/ProductCard';
 import { supabase } from '@/lib/supabase';
 import type { Product } from '@/types';
+import { mockProducts } from '@/data/products';
 
 export function Shop() {
   const [searchParams] = useSearchParams();
   const [products, setProducts] = useState<Product[]>([]);
   const [categories, setCategories] = useState<any[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [_isLoading, setIsLoading] = useState(true);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
 
   const initialFilter = searchParams.get('filter');

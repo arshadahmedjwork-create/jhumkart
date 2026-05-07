@@ -14,8 +14,7 @@ import {
   Settings,
   HelpCircle,
   ExternalLink,
-  X,
-  Check
+  X
 } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 

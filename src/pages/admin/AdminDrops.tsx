@@ -3,14 +3,12 @@ import { supabase } from '@/lib/supabase';
 import { 
   Flame, 
   Plus, 
-  Calendar, 
   Clock, 
   X, 
   PlusCircle,
   Trash2,
   Play,
   Square,
-  ChevronRight,
   Package
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';

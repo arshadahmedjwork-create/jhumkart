@@ -11,13 +11,19 @@ export const mockProducts: Product[] = [
     price: 45000,
     sale_price: null,
     stock: 15,
+    low_stock_threshold: 5,
+    category_id: null,
+    collection_id: null,
     material: '22K Gold',
     finish: 'Antique',
+    weight: '25g',
+    dimensions: '3cm x 2cm',
+    occasion_tags: ['Wedding', 'Festival'],
     badges: ['Bestseller'],
     is_featured: true,
     is_bestseller: true,
     status: 'active',
-    product_images: [{ id: '1', product_id: '1', image_url: 'https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?q=80\u0026w=800\u0026auto=format\u0026fit=crop', alt_text: '', display_order: 1, is_primary: true }]
+    product_images: [{ id: '1', product_id: '1', image_url: 'https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?q=80&w=800&auto=format&fit=crop', alt_text: '', display_order: 1, is_primary: true }]
   },
   {
     id: '2',
@@ -29,13 +35,19 @@ export const mockProducts: Product[] = [
     price: 125000,
     sale_price: null,
     stock: 5,
+    low_stock_threshold: 2,
+    category_id: null,
+    collection_id: null,
     material: '22K Gold',
     finish: 'Antique',
+    weight: '45g',
+    dimensions: '5cm x 3cm',
+    occasion_tags: ['Bridal', 'Wedding'],
     badges: ['New Arrival'],
     is_featured: true,
     is_bestseller: false,
     status: 'active',
-    product_images: [{ id: '2', product_id: '2', image_url: 'https://images.unsplash.com/photo-1599643478524-fb66f7f2b1d6?q=80\u0026w=800\u0026auto=format\u0026fit=crop', alt_text: '', display_order: 1, is_primary: true }]
+    product_images: [{ id: '2', product_id: '2', image_url: 'https://images.unsplash.com/photo-1599643478524-fb66f7f2b1d6?q=80&w=800&auto=format&fit=crop', alt_text: '', display_order: 1, is_primary: true }]
   },
   {
     id: '3',
@@ -47,12 +59,18 @@ export const mockProducts: Product[] = [
     price: 35000,
     sale_price: 32000,
     stock: 20,
+    low_stock_threshold: 5,
+    category_id: null,
+    collection_id: null,
     material: '22K Gold',
     finish: 'Matte',
+    weight: '18g',
+    dimensions: '2.5cm x 1.5cm',
+    occasion_tags: ['Casual', 'Festival'],
     badges: ['Trending'],
     is_featured: true,
     is_bestseller: true,
     status: 'active',
-    product_images: [{ id: '3', product_id: '3', image_url: 'https://images.unsplash.com/photo-1602751584412-700251145538?q=80\u0026w=800\u0026auto=format\u0026fit=crop', alt_text: '', display_order: 1, is_primary: true }]
+    product_images: [{ id: '3', product_id: '3', image_url: 'https://images.unsplash.com/photo-1602751584412-700251145538?q=80&w=800&auto=format&fit=crop', alt_text: '', display_order: 1, is_primary: true }]
   }
 ];

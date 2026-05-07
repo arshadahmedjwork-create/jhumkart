@@ -8,7 +8,6 @@ import {
   Edit2, 
   Trash2, 
   X, 
-  Upload,
   CheckCircle2,
   FileText,
   Filter,

@@ -60,7 +60,7 @@ export const useAuth = create<AuthState>((set, get) => ({
     }
 
     // Listen for future auth changes (sign in, sign out, token refresh)
-    supabase.auth.onAuthStateChange(async (event, session) => {
+    supabase.auth.onAuthStateChange(async (_event, session) => {
       if (session?.user) {
         const profile = await fetchProfile(session.user.id);
         set({ user: session.user, profile, loading: false });

@@ -17,6 +17,7 @@ const mockProducts: Product[] = [
     price: 45000,
     sale_price: null,
     stock: 15,
+    low_stock_threshold: 5,
     category_id: null,
     collection_id: null,
     material: '22K Hallmarked Gold',

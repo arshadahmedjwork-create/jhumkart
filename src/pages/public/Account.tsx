@@ -5,7 +5,7 @@ import { Package, User, LogOut } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
 
 export function Account() {
-  const { user, profile, signOut, initialize } = useAuth();
+  const { user, profile, signOut } = useAuth();
   const [activeTab, setActiveTab] = useState<'profile' | 'orders'>('profile');
   const [isSaving, setIsSaving] = useState(false);
   const [orders, setOrders] = useState<any[]>([]);

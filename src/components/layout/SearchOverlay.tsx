@@ -41,7 +41,7 @@ export function SearchOverlay({ isOpen, onClose }: SearchOverlayProps) {
       setIsSearching(true);
       try {
         // Try Supabase first
-        let { data, error } = await supabase
+        let { data, error: _error } = await supabase
           .from('products')
           .select('id, name, slug, price, sale_price, product_images(image_url)')
           .or(`name.ilike.%${query}%,description.ilike.%${query}%`)

@@ -1,4 +1,4 @@
-import type { User } from '@supabase/supabase-js';
+import type { User as _User } from '@supabase/supabase-js';
 
 export interface Profile {
   id: string;
@@ -39,6 +39,7 @@ export interface Product {
   price: number;
   sale_price: number | null;
   stock: number;
+  low_stock_threshold: number;
   category_id: string | null;
   collection_id: string | null;
   material: string | null;

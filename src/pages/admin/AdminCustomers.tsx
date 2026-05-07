@@ -12,7 +12,7 @@ import {
   ChevronRight,
   FileText
 } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion as _motion } from 'framer-motion';
 
 export function AdminCustomers() {
   const [customers, setCustomers] = useState<any[]>([]);
